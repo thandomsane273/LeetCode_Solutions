@@ -3,8 +3,11 @@ class Solution {
         String number=String.valueOf(x).trim();
         int start=0;
         int end=number.length()-1;
-
-        while (end>start){
+        if(x<0){
+            return false;
+        }
+        else{
+            while (end>start){
             if(number.charAt(start) != number.charAt(end)){
                 return false;
             }
@@ -14,5 +17,8 @@ class Solution {
             }
         }
         return true;
+
+        }
+        
     }    
 }
